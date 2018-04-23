@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <title>颜值打分器</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <script src="/static/js/jquery.min.js"></script>
+    <script src="/static/js/semantic.min.js"></script>
+    <link rel="stylesheet" href="/static/css/semantic.min.css" />
+  </head>
+
+  <body>
+  <div class="ui inverted orange center aligned big segment">
+      <h2>
+          <i class="tv icon"> </i>你的颜值有多少分
+      </h2>
+    </div>
+    <div class="ui inverted yellow center aligned big segment">
+        <form class="ui form" method=POST enctype=multipart/form-data action="{{ url_for('upload') }}">
+          <div class="field">
+            <img class="ui centered medium circular image" src=" {{url_for('send_image', filename=image_name)}}">
+          </div>
+          <div class="field">
+            <label><h2>请上传照片</h2></label>
+          </div>
+          <div class="field">
+            <div class="ui input">
+              <input type=file name=photo>
+            </div>
+          </div>
+          <button class="ui blue button" type="submit">上传</button>
+        </form>
+    </div>
+    <div class="ui inverted blue center aligned big segment">
+      <div class="field">
+        <label><h2>得分( 5 分满分): {{ score }}</h2></label>
+      </div>
+    </div> 
+  </body>
+</html>
