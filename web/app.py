@@ -9,6 +9,8 @@ from keras.models import load_model
 from keras.preprocessing.image import array_to_img, img_to_array, load_img
 from scipy.misc import imresize
 
+from gevent.wsgi import WSGIServer
+
 app = Flask(__name__)
 
 photos = UploadSet('photos', IMAGES)
@@ -45,4 +47,4 @@ def send_image(filename):
 
 
 if __name__ == '__main__':
-    app.run(host="0.0.0.0")
+    WSGIServer(('0.0.0.0', 5000), app).serve_forever()

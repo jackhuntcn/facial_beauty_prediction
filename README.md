@@ -9,7 +9,7 @@ MSE loss on test data is 0.16.
 ```
 git clone https://github.com/jackhuntcn/facial_beauty_prediction.git
 cd facial_beauty_prediction/web/
-# download model.h5 from BaiDuYun and put it into model/ directory
+# download model.h5 from BaiDuYun and put it into model/ directory, make sure model/model.h5 is exists
 # https://pan.baidu.com/s/1oJd67FMwO9KVwN5hgda3JQ password: mw8m
 python app.py
 ```
@@ -20,4 +20,4 @@ python app.py
 * scipy
 * keras 2.1.5
 * flask / flask-uploads
-
+* gevent
