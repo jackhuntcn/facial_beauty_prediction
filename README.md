@@ -18,6 +18,7 @@ python app.py
 
 * numpy
 * scipy
+* cv2
 * keras 2.1.5
 * flask / flask-uploads
 * gevent

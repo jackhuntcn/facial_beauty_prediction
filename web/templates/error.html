@@ -18,17 +18,7 @@
     <div class="ui inverted yellow center aligned big segment">
         <form class="ui form" method=POST enctype=multipart/form-data action="{{ url_for('upload') }}">
           <div class="field">
-            <img class="ui centered medium circular image" src=" {{url_for('send_image', filename=image_name)}}">
-          </div>
-          <div class="field">
-            <label><h2>请上传照片(清晰单人正面免冠照片准确度较高,如下示例照片)</h2></label>
-            <div class="ui small images">
-              <img class="ui image" src="/uploads/demo1.jpg">
-              <img class="ui image" src="/uploads/demo2.jpg">
-              <img class="ui image" src="/uploads/demo3.jpg">
-              <img class="ui image" src="/uploads/demo4.jpg">
-              <img class="ui image" src="/uploads/demo5.jpg">
-            </div>
+            <label><h2>请上传照片</h2></label>
           </div>
           <div class="field">
             <div class="ui input">
@@ -40,7 +30,7 @@
     </div>
     <div class="ui inverted blue center aligned big segment">
       <div class="field">
-        <label><h2>得分( 5 分满分): {{ score }}</h2></label>
+        <label><h2>您刚刚上传的照片,人工智障并没有检测出清晰正面人脸,请重新上传!</h2></label>
       </div>
     </div> 
   </body>
