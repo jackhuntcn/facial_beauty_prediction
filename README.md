@@ -22,3 +22,8 @@ python app.py
 * keras 2.1.5
 * flask / flask-uploads
 * gevent
+
+## update
+
+using generator to reduce memory usage, see FBP5500-Resnet50-fit_generator.ipynb
+and using a much small lr to get a pretty good mse loss (0.0885)
